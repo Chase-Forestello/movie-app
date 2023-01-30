@@ -25,8 +25,13 @@ const MovieCard = ({ movie }) => {
           className="btn btn-dark"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
+          onClick={() => {
+            console.log("clicked");
+            let modalBody = document.getElementById("modal-body");
+            modalBody.innerHTML = movie.overview;
+          }}
         >
-          Launch demo modal
+          Overview
         </button>
       </div>
     </div>

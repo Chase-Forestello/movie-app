@@ -30,8 +30,8 @@ h1 {
   letter-spacing: 0.9px;
   background: linear-gradient(
     90deg,
-    rgba(249, 211, 180, 1) 0%,
-    rgba(249, 211, 180, 0) 100%
+    rgb(124, 155, 240) 0%,
+    rgba(245, 242, 240, 0.685) 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -99,7 +99,7 @@ h1 {
 
 .empty h2 {
   font-size: 1.25rem;
-  color: #f9d3b4;
+  color: #c2c1c0;
   font-family: var(--font-raleway);
 }
 
@@ -125,6 +125,21 @@ h1 {
 
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
   box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+  position: relative;
+  background-color: #141414ef;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  height: 80%;
+  max-height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  color: whitesmoke;
 }
 
 .movie div:nth-of-type(1) {
