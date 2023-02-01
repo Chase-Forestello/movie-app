@@ -44,15 +44,23 @@ function App() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           onKeyDown={(e) => {
-            if (e.key === "Enter") {
+            if (e.key === "Enter" && search !== "") {
               searchMovies(search);
+            } else if (e.key === "Enter" && search === "") {
+              alert("Please enter a movie title");
             }
           }}
         />
         <img
           src={searchIcon}
           alt="search"
-          onClick={() => searchMovies(search)}
+          onClick={() => {
+            if (search.length !== 0) {
+              searchMovies(search);
+            } else {
+              alert("Please enter a movie title");
+            }
+          }}
         />
       </div>
       {movies.length > 0 ? (
