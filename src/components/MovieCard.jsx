@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 
 const MovieCard = ({ movie }) => {
   return (
@@ -28,9 +29,13 @@ const MovieCard = ({ movie }) => {
           onClick={() => {
             console.log("clicked");
             let modalBody = document.getElementById("modal-body");
-            modalBody.innerHTML = movie.overview;
-            // USE SETSTATE TO CHANGE THE STATE OF THE MODAL!
-
+            const modalContent = (
+              <div>
+                <p>{movie.overview}</p>
+                <p>Release date: {movie.release_date}</p>
+              </div>
+            )
+            ReactDOM.render(modalContent, modalBody);
           }}
         >
           Overview
