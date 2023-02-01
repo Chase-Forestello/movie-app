@@ -23,7 +23,6 @@ const API_URL =
 //   vote_average: 6.6,
 //   vote_count: 4474,
 // };
-
 function App() {
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("");
