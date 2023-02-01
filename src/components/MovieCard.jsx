@@ -29,6 +29,8 @@ const MovieCard = ({ movie }) => {
             console.log("clicked");
             let modalBody = document.getElementById("modal-body");
             modalBody.innerHTML = movie.overview;
+            // USE SETSTATE TO CHANGE THE STATE OF THE MODAL!
+
           }}
         >
           Overview
