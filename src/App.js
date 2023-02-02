@@ -2,9 +2,9 @@ import "./App.css";
 import { useState } from "react";
 import searchIcon from "./searchIcon.svg";
 import MovieCard from "./components/MovieCard";
-
+const API_KEY = process.env.REACT_APP_API_KEY;
 const API_URL =
-  "https://api.themoviedb.org/3/search/movie?api_key=6ce0041b387bdc16ed1d50bd0aed4f0a&language=en-US&page=1&include_adult=false&query=";
+  `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&page=1&include_adult=false&query=`;
 
 // const movie1 = {
 //   adult: false,
@@ -71,9 +71,10 @@ function App() {
         </div>
       ) : (
         <div className="empty">
-          <h2>No movies found</h2>
+          <h2>No movie found</h2>
         </div>
       )}
+
       {/* <!-- Modal --> */}
       <div
         className="modal fade"
